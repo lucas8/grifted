@@ -7,6 +7,9 @@ import { base } from "viem/chains";
 import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { Navbar } from "@/components/navbar";
+import { Spinner } from "@/components/Spinner";
 
 const config = createConfig(
   getDefaultConfig({
@@ -41,9 +44,7 @@ export default function Home() {
           "--ck-connectbutton-background": "#ECEDEF",
         }}
       >
-        <nav className="full flex items-center justify-end px-[120px] h-[82px]">
-          <ConnectKitButton />
-        </nav>
+        <Navbar />
         <main className="flex flex-col items-center mt-12">
           <div className="text-center w-full max-w-[480px]">
             <h1 className="font-display text-[56px] font-bold -tracking-[1.6px] leading-[110%]">
@@ -67,32 +68,13 @@ export default function Home() {
                   className="w-full px-5 py-3 font-body placeholder:text-gray-400 outline-none focus:ring-black focus:border-black"
                   placeholder="https://www.shopify.com/product-url"
                 />
-                {isLoading && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="text-black animate-spin"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
-                      opacity=".25"
-                    />
-                    <path
-                      fill="currentColor"
-                      d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
-                    />
-                  </svg>
-                )}
-
+                {isLoading && <Spinner />}
                 <button type="submit" />
               </form>
               <AnimatePresence>
                 {showPreview && (
                   <motion.div
-                    className="flex items-center justify-between w-full p-4"
+                    className="flex items-center justify-between w-full p-4 border-t border-gray-200"
                     initial={{ y: -4, opacity: 0, scaleY: 0.9 }}
                     animate={{ y: 0, opacity: 1, scaleY: 1 }}
                   >
@@ -115,9 +97,15 @@ export default function Home() {
                         </span>
                       </div>
                     </div>
-                    <button className="bg-gray-200 px-4 py-2 text-sm font-semibold text-black rounded-full">
-                      Grift it
-                    </button>
+                    <Link
+                      href={`/shop?product=${encodeURIComponent(
+                        "https://mschf.com/shop/big-red-boot/red",
+                      )}`}
+                    >
+                      <button className="bg-gray-200 px-4 py-2 text-sm font-semibold text-black rounded-full">
+                        Grift it
+                      </button>
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>

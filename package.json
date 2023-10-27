@@ -13,10 +13,12 @@
     "@react-three/fiber": "^8.15.8",
     "clsx": "^2.0.0",
     "connectkit": "^1.5.3",
+    "ethers": "^6.8.0",
     "framer-motion": "^10.16.4",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.47.0",
     "three": "^0.158.0",
     "viem": "^1.17.2",
     "wagmi": "^1.4.5"
