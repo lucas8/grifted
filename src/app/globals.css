@@ -4,9 +4,9 @@
 
 body {
   background-color: #fafafa;
-  /* background-image: url(/img/bg.png); */
-  /* background-repeat: no-repeat; */
-  /*   background-sizing */
+  background-image: url(/img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .canvas {
