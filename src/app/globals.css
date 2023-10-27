@@ -4,6 +4,9 @@
 
 body {
   background-color: #fafafa;
+  /* background-image: url(/img/bg.png); */
+  /* background-repeat: no-repeat; */
+  /*   background-sizing */
 }
 
 .canvas {

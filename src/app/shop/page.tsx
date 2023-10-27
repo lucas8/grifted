@@ -95,7 +95,7 @@ export default function Page() {
                   "mt-8 bg-black w-full py-3 text-white rounded-full font-semibold text-lg hover:bg-gray-900 transition",
                   !(email?.length > 0 && name?.length > 0) &&
                     "opacity-40 hover:bg-black",
-                  isSubmitting && "bg-[#D7D7D8] hover:bg-[#D7D7D8]",
+                  isSubmitting && "bg-gray-200 hover:bg-gray-200",
                 )}
               >
                 {!isSubmitting ? (

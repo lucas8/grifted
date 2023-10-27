@@ -52,8 +52,8 @@ export default function Home() {
               <br /> to Grift?
             </h1>
             <p className="font-body mt-6 text-gray-600">
-              Some kind of description of the service and why you should
-              <br /> connect your wallet and not worry.
+              Use stablecoins to gift anything on Amazon to anyone — we never
+              have access to your funds.
             </p>
             {/* hardcoded yikers! */}
             <div className="border border-gray-200 rounded-lg mt-[32px] shadow-2xl overflow-hidden">
@@ -111,7 +111,7 @@ export default function Home() {
               </AnimatePresence>
             </div>
             <p className="text-gray-600 mt-3 font-body">
-              This is a hint text to help user.
+              Paste a link to a product to get started.
             </p>
           </div>
         </main>

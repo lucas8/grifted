@@ -52,12 +52,12 @@ export default function Page() {
                 className="mt-3 bg-white w-full border border-gray-300 px-5 py-3 font-body placeholder:text-gray-400 outline-none focus:ring-black focus:border-black rounded-lg"
                 placeholder="Email address"
                 type="email"
-                value="getgrifted.com/redeem/86701234-8dbc-4958-bddc-7702cec2e45e"
+                value="grifted.vercel.app/redeem/86701234-8dbc-4958-bddc-7702cec2e45e"
                 onChange={() => {}}
               />
 
               <Link href="/">
-                <button className="mt-8 bg-[#D7D7D8] hover:bg-[#D7D7D8] w-full py-3 rounded-full font-semibold text-lg transition text-black">
+                <button className="mt-8  bg-gray-200 hover:bg-gray-200 w-full py-3 rounded-full font-semibold text-lg transition text-black">
                   Grift something else
                 </button>
               </Link>
